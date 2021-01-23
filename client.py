@@ -7,6 +7,9 @@
 
 # Rather than using cb's in JS, we can use
 # call in socket.ioClient().
+
+# note that these clients will work in the CLI.
+
 import asyncio
 import sys
 import socketio
