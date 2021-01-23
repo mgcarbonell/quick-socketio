@@ -4,7 +4,8 @@
 # we will add async to our defs
 # and await where we need it.
 
-# note that these clients will work in the CLI.
+# note that these clients will also work
+# in the cli
 import asyncio
 import socketio
 
