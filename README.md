@@ -1,2 +1,2 @@
 # quick-socketio
-Weekend project following Miguel Grinberg's python + javascript socketio tutorial
+Weekend project following [Miguel Grinberg's](https://blog.miguelgrinberg.com/) python + javascript socketio tutorial
