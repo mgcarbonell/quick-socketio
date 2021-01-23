@@ -31,6 +31,7 @@ def task(sid):
 
 # we're going to do a cheap user system by allowing a user
 # to create a username by entering it localhost:8000/#username
+# we will write this to the user session.
 @sio.event
 def connect(sid, environ):
   global client_count
@@ -42,9 +43,9 @@ def connect(sid, environ):
   if not username:
     return False
 
-  with sio.session(sid) as session:
-    session['username'] = username
-  sio.emit('user_joined', username)
+  with sio.session(sid) as session: #this is a dictionary. We
+    session['username'] = username  #can write directly to it.
+  sio.emit('user_joined', username) #We can emit to test it.
 
   client_count += 1
   print(sid, 'connected')
