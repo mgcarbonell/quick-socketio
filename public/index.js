@@ -1,4 +1,6 @@
 // setting customer headers for "user auth"
+// we're going to do a cheap user system by allowing a user
+// to create a username by entering it localhost:8000/#username
 const sio = io({
   transportOptions: {
     polling: {
