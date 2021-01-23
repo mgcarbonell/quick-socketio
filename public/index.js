@@ -1,3 +1,4 @@
+// setting customer headers for "user auth"
 const sio = io({
   transportOptions: {
     polling: {
