@@ -8,7 +8,7 @@
 # 'app:app' tells gunicorn to look for app and make it the server app. 
 
 # We can have multiple workers, but that's more complex, 
-# 1 worker can still handle a thousand connections. 
+# 1 worker can still handle a ton connections. 
 # How to use more is in the python-socketio documentation.
 
 import random
@@ -29,7 +29,8 @@ def task(sid):
   result = sio.call('mult', {'numbers': [3, 4]}, to=sid)
   print(result)
 
-
+# we're going to do a cheap user system by allowing a user
+# to create a username by entering it localhost:8000/#username
 @sio.event
 def connect(sid, environ):
   global client_count
